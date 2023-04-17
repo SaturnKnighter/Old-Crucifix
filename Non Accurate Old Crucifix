@@ -200,14 +200,14 @@ local function func(ins)
             task.spawn(function()
                 c:SetAttribute("Killing", true)
                 ModuleScripts.MainGame.camShaker:ShakeOnce(10, 10, 5, 0.15)
-                wait(2)
+                wait(1)
                 c.Core.Initiate:Stop()
                 for i=1,3 do
                     c.Core.Repent:Play()  
                     c.Core.Attachment.Angry.Enabled=true
                     ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, 1.3, 0.15)
                     delay(c.Core.Repent.TimeLength, function() c.Core.Attachment.Angry.Enabled=false end)
-                    wait(5)
+                    wait(1.4)
                 end
                 c.Core.Scream:Play();
                 ModuleScripts.MainGame.camShaker:ShakeOnce(8, 8, c.Core.Scream.TimeLength, 0.15);
