@@ -1,3 +1,8 @@
+local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
+
+
+-- Create your tool here
 
 
 local function IsVisible(part)
@@ -439,3 +444,13 @@ dupeCrucifix.Event:Connect(function(time, entityRoot)
     fakeCross.Anchored = true
     fakeCross.CanCollide = true
 end)
+
+
+-- Create custom shop item
+CustomShop.CreateItem(exampleTool, {
+    Title = "Crucifix",
+    Desc = "Single use, blocks most attacks",
+    Image = "rbxassetid://7818923311",
+    Price = 200,
+    Stack = 1,
+})
